@@ -250,7 +250,77 @@ hr{border:0;border-top:1px solid #eee;margin:20px 0}
 .h-border-pale-yellow,.h-hover-border-pale-yellow:hover{border-color:#ffffcc!important}.h-border-pale-blue,.h-hover-border-pale-blue:hover{border-color:#e7ffff!important}
 .logo{
     position: fixed;
-    width:4.5rem;
-    height:3rem;
+    width:11rem;
+    height:3.1rem;
     padding:0rem;
+}
+.about-container
+{
+	width: 1280px;
+	margin: 70px auto 0;
+	display: flex;
+	flex-direction: row;
+	flex-wrap: wrap;
+
+}
+.about-container .about-box
+{
+	position: relative;
+	width: 300px;
+	height:300px;
+	background: transparent;
+	margin: 5px;
+	box-sizing: border-box;
+	display: inline-block; 
+}
+.about-container .about-box .about-imgBox
+{
+	position: relative;
+	overflow: hidden;
+}
+.about-container .about-box  .about-imgBox img
+{
+	max-width: 100%;
+	transition: transform  2s ;
+}
+.about-container .about-box:hover  .about-imgBox img
+{
+	transform: scale(1,2);
+}
+.about-container  .about-box  .about-details
+{
+	position: absolute;
+	top: 10px;
+	left: 5px;
+	bottom: 10px;
+	right: 10px;
+	background: rgba(0,0,0,.8);
+	transform: scaleY(0);
+	transition: transform .5s;
+}
+.about-container  .about-box:hover  .about-details
+{
+	transform: scaleY(1);
+}
+
+.about-container  .about-box  .about-details  .about-content
+{
+	position: absolute;
+	top: 50%;
+	transform: translateY(-50%);
+	text-align: justify;
+	padding: 15px;
+	color: #fff;
+}
+.about-container .about-box  .about-details  .about-content h2
+{
+	margin: 0;
+	padding: 0;
+	font-size: 20px;
+	color: #ff0;
+}
+.about-container .about-box  .about-details  .about-content p
+{
+	margin: 10px 0 0;
+	padding: 0;
 }
