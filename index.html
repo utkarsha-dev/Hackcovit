@@ -166,7 +166,7 @@ body, html {
   <p class="h-center h-large">Describe your event here</p>
   <div class="h-card">
     <div class="h-container">
-      <form action="Thanks.html" target="_blank">
+      <form  target="_blank">
         <p><input class="h-input h-border" id="maintext1" type="text" placeholder="Title of the event" required name="Event-Name"></p>
         <p><input class="h-input h-border" id="maintext2" type="date" placeholder="Date" required name="Event-Date"></p>
         <p><input class="h-input h-border" id="maintext3" type="time" placeholder="Time at which the event is scheduled" required name="Time"></p>
@@ -185,8 +185,6 @@ body, html {
 
 <script src="https://www.gstatic.com/firebasejs/7.14.2/firebase-app.js"></script>
 <script src="https://www.gstatic.com/firebasejs/7.14.2/firebase-firestore.js"></script>
-
-
 <script src="https://www.gstatic.com/firebasejs/7.14.2/firebase-analytics.js"></script>
 
 <script>
@@ -300,12 +298,12 @@ body, html {
     <p><i class="fa fa-envelope fa-fw h-xxlarge h-margin-right"> </i> Email: enigma@mail.com</p>
     <br>
     <form action="/action_page.php" target="_blank">
-      <p><input class="h-input h-border" type="text" placeholder="Name" required name="Name"></p>
-      <p><input class="h-input h-border" type="text" placeholder="Email" required name="Email"></p>
-      <p><input class="h-input h-border" type="text" placeholder="Subject" required name="Subject"></p>
-      <p><input class="h-input h-border" type="text" placeholder="Message" required name="Message"></p>
+      <p><input class="h-input h-border" id="m1" type="text" placeholder="Name" required name="Name"></p>
+      <p><input class="h-input h-border" id="m2" type="text" placeholder="Email" required name="Email"></p>
+      <p><input class="h-input h-border" id="m3" type="text" placeholder="Subject" required name="Subject"></p>
+      <p><input class="h-input h-border" id="m4" type="text" placeholder="Message" required name="Message"></p>
       <p>
-        <button class="h-button h-black" type="submit">
+        <button class="h-button h-black" type="submit" onclick="message()">
           <i class="fa fa-paper-plane"></i> SEND MESSAGE
         </button>
       </p>
