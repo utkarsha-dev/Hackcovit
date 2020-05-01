@@ -77,7 +77,7 @@ hr{border:0;border-top:1px solid #eee;margin:20px 0}
 .h-modal{z-index:3;display:none;padding-top:100px;position:fixed;left:0;top:0;width:100%;height:100%;overflow:auto;background-color:rgb(0,0,0);background-color:rgba(0,0,0,0.4)}
 .h-modal-content{
     margin:auto;background-color:#fff;position:relative;padding:0;outline:0;width:600px}
-.h-bar{width:100%;overflow:hidden}.h-center .h-bar{display:inline-block;width:auto}
+.h-bar{width:100%;overflow:hidden;height:4.2rem;}.h-center .h-bar{display:inline-block;width:auto;}
 .h-bar .h-bar-item{padding:8px 16px;float:left;width:auto;border:none;display:block;outline:0}
 .h-bar .h-dropdown-hover,.h-bar .h-dropdown-click{position:static;float:left}
 .h-bar .h-button{white-space:normal}
@@ -248,3 +248,9 @@ hr{border:0;border-top:1px solid #eee;margin:20px 0}
 .h-border-dark-grey,.h-hover-border-dark-grey:hover,.h-border-dark-gray,.h-hover-border-dark-gray:hover{border-color:#616161!important}
 .h-border-pale-red,.h-hover-border-pale-red:hover{border-color:#ffe7e7!important}.h-border-pale-green,.h-hover-border-pale-green:hover{border-color:#e7ffe7!important}
 .h-border-pale-yellow,.h-hover-border-pale-yellow:hover{border-color:#ffffcc!important}.h-border-pale-blue,.h-hover-border-pale-blue:hover{border-color:#e7ffff!important}
+.logo{
+    position: fixed;
+    width:4.5rem;
+    height:3rem;
+    padding:0rem;
+}
