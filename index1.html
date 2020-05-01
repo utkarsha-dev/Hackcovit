@@ -1,315 +1,165 @@
 <!DOCTYPE html>
 <html>
-<title>Enigma</title>
-<meta charset="UTF-8">
+<head>
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<link rel="stylesheet" href="./styles.css">
-<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Raleway">
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 <style>
-body,h1,h2,h3,h4,h5,h6 {font-family: "Raleway", sans-serif}
-
-body, html {
-  height: 100%;
-  line-height: 1.8;
-}
-
-/* Full height image header */
-.bgimg-1 {
-  background-position: center;
-  background-size: cover;
-  background-image: url("titletry.jpeg");
-  min-height: 100%;
-}
-
-.h-bar .h-button {
-  padding: 16px;
-}
-h1,.container p{
-  margin-left:30px;
-}
-</style>
+        body {font-family: Arial, Helvetica, sans-serif;
+        background: #000000;}
+        * {box-sizing: border-box;}
+        
+        /* Full-width input fields */
+        input[type=text]{
+          width: 100%;
+          padding: 15px;
+          margin: 5px 0 22px 0;
+          display: inline-block;
+          border: none;
+          background: #f1f1f1;
+        }
+        
+        input[type=text]:focus{
+          background-color: #ddd;
+          outline: none;
+        }
+        
+        hr {
+          border: 1px solid #f1f1f1;
+          margin-bottom: 25px;
+        }
+        
+        /* Set a style for all buttons */
+        button {
+          background-color: #4CAF50;
+          color: white;
+          padding: 2px 2px 14px 20px;
+          margin: 8px 0;
+          border: none;
+          cursor: pointer;
+          width: 100%;
+          opacity: 0.9;
+          border-radius: 10px;
+        }
+        
+        button:hover {
+          opacity:1;
+        }
+        
+        /* Extra styles for the cancel button */
+        .cancelbtn {
+          padding: 14px 20px;
+          background-color: #f44336;
+        }
+        .signupbtn{
+          padding: 14px 20px;
+          background-color: green;
+        }
+        /* Float cancel and signup buttons and add an equal width */
+        .cancelbtn, .signupbtn {
+          float: left;
+          width: 50%;
+        }
+        
+        /* Add padding to container elements */
+        .container {
+          padding: 5px 5px 5px 5px;
+        }
+        
+        /* Clear floats */
+        .clearfix::after {
+          content: "";
+          clear: both;
+          display: table;
+        }       
+        /* Change styles for cancel button and signup button on extra small screens */
+        @media screen and (max-width: 500px) {
+          .body,.button,.cancelbtn, .signupbtn {
+              width: 100%;
+           }
+         }
+</style>        
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.0/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+    </head>
 <body>
-
-<!-- Navbar (sit on top) -->
-<div class="h-top">
-  <div class="h-bar h-white h-card" id="myNavbar">
-    <a href="#home" class="h-bar-item h-button h-wide">
-      <img src="logo2.png" class="logo">LOGO</a>
-    <!-- Right-sided navbar links -->
-    <div class="h-right h-hide-small">
-      <a href="#about" class="h-bar-item h-button">ABOUT</a>
-      <a href="#register" class="h-bar-item h-button"><i class="fa fa-user"></i> REGISTER</a>
-      <a href="#create" class="h-bar-item h-button"><i class="fa fa-th"></i>CREATE</a>
-      <a href="#events" class="h-bar-item h-button">EVENTS</a>
-      <a href="#contact" class="h-bar-item h-button"><i class="fa fa-envelope"></i> CONTACT</a>
-    </div>
-    <!-- Hide right-floated links on small screens and replace them with a menu icon -->
-
-    <a href="javascript:void(0)" class="h-bar-item h-button h-right h-hide-large h-hide-medium" onclick="h_open()">
-      <i class="fa fa-bars"></i>
-    </a>
-  </div>
-</div>
-
-<!-- Sidebar on small screens when clicking the menu icon -->
-<nav class="h-sidebar h-bar-block h-black h-card h-animate-left h-hide-medium h-hide-large" style="display:none" id="mySidebar">
-  <a href="javascript:void(0)" onclick="h_close()" class="h-bar-item h-button h-large h-padding-16">Close ×</a>
-  <a href="#about" onclick="h_close()" class="h-bar-item h-button">ABOUT</a>
-  <a href="#register" onclick="h_close()" class="h-bar-item h-button">REGISTER</a>
-  <a href="#create" onclick="h_close()" class="h-bar-item h-button">CREATE</a>
-  <a href="#events" onclick="h_close()" class="h-bar-item h-button">EVENTS</a>
-  <a href="#contact" onclick="h_close()" class="h-bar-item h-button">CONTACT</a>
-</nav>
-
-<!-- Header with full-height image -->
-<header class="bgimg-1 h-display-container h-grayscale-min" id="home">
-  <div class="h-display-left h-text-white" style="padding:48px">
-    <span class="h-jumbo h-hide-small">Share.</span><br>
-    <span class="h-xxlarge h-hide-medium">Connect.</span><br>
-    <span class="h-large">Compete.</span>
-    <p><a href="#about" class="h-button h-white h-padding-large h-large h-margin-top h-opacity h-hover-opacity-off">Start today</a></p>
-  </div> 
-  
-</header>
-
-<!-- About Section -->
-<div class="h-container" style="padding:90px 16px" id="about">
-  <h3 class="h-center">Don't get depressed.</h3>
-  <p class="h-center h-large">Here is some motivation for you.</p>
-  <div class="about-container">
-		<div class="about-box">
-			<div class="about-imgBox">
-				<img src="img1.jpeg">
-			</div>
-			<div class="about-details">
-				<div class="about-content">
-					<h2>EDUCATION</h2>
-				<p>Sudden break in studies is quite depressing, but always remember that a bright and sunny day is always preceded by a dark night-
-          "The struggle you are in today is developing the strength you need for tomorrow" ~Dr.Abdul Kalam</p>
-				</div>
-			</div>
-		</div>
-
-		
-		<div class="about-box">
-			
-			<div class="about-imgBox">
-				<img src="img3.jpeg">
-			</div>
-			<div class="about-details">
-				<div class="about-content">
-					<h2>EXAMS</h2>
-				<p>Many of you were about to appear for extrance exams don't worry everthings is going to be blooming ahead for you just believe in yourself "If my mind can conceive it,and my heart can believe it then I can achieve it" ~Mohammed Ali</p>
-      
-				</div>
-			</div>
-		</div>
-		<div class="about-box">
-			
-			<div class="about-imgBox">
-				<img src="img4.jpeg">
-			</div>
-			<div class="about-details">
-				<div class="about-content">
-					<h2>STUCK AWAY FROM HOME</h2>
-				<p>Due to sudden outbreak of COVID-19,you are forced to stay away from home but don't panic you just need to keep faith in yourself. "May your trails be crooked, leading to the most amazing view. May your mountains rise into and above the clouds"  ~Edward Abbey</p>
-				</div>
-			</div>
-		</div>
-		<div class="about-box">
-			
-			<div class="about-imgBox">
-				<img src="img5.jpeg">
-			</div>
-			<div class="about-details">
-				<div class="about-content">
-					<h2>CAREER RELATED STRESS</h2>
-				<p>During this pandemic and fall of many industries you just need to believe in yourself."Have the courage to follow your heart and intution. They somehow know what you truly want to become." ~Steve Jobs</p>
-				</div>
-			</div>
-		</div>
-
-	</div>
-  
-</div>
-
-
-
-<!-- Register Section -->
-<div class="container" id="register" style="padding:60px 16px">
-  <h1>Registration for events</style></h1>
-  <p>Please fill in this form to register in event...</p>
-  <p><a href="index1.html" class="h-button h-black"> Register HERE</a></p>
-  <hr>
-
-</div>
-
-<!-- Promo Section - "Want to organise" -->
-<div class="h-container h-light-grey" style="padding:128px 16px">
-  <div class="h-row-padding">
-    <div class="h-col m6">
-      <h3>Want to organise an event?</h3>
-      <p>Click here to create your own event<br>or competition.</p>
-      <p><a href="#create" class="h-button h-black"><i class="fa fa-th"> </i> CREATE HERE</a></p>
-    </div>
+        
+  <div class="container">
+        <h1>Regstration</h1>
+        <p>Please fill in this form to register...</p>
+        <hr>
     
-  </div>
-</div>
-
-<!-- Create Section -->
-<div class="h-container" style="padding:90px 16px" id="create">
-  <h3 class="h-center">CREATE HERE</h3>
-  <p class="h-center h-large">Describe your event here</p>
-  <div class="h-card">
-    <div class="h-container">
-      <form action="Thanks.html" target="_blank">
-        <p><input class="h-input h-border" type="text" placeholder="Title of the event" required name="Event-Name"></p>
-        <p><input class="h-input h-border" type="date" placeholder="Date" required name="Event-Date"></p>
-        <p><input class="h-input h-border" type="time" placeholder="Time at which the event is scheduled" required name="Time"></p>
-        <p><textarea class="h-input h-border" type="textbox" placeholder="Skills Required" required name="Skills"></textarea></p>
-        <p><textarea class="h-input h-border" type="textbox" placeholder="Description of Prizes" required name="Rewards"></textarea></p>
-      
-      
-      <p><button class="h-button h-light-grey h-block"> Create Event </button></p>
-    </form>
-    </div>
-  </div>
-</div>
-
-<!-- Modal for full size images on click-->
-<div id="modal01" class="h-modal h-black" onclick="this.style.display='none'">
-  <span class="h-button h-xxlarge h-black h-padding-large h-display-topright" title="Close Modal Image">×</span>
-  <div class="h-modal-content h-animate-zoom h-center h-transparent h-padding-64">
-    <img id="img01" class="h-image">
-    <p id="caption" class="h-opacity h-large"></p>
-  </div>
-</div>
-
-<!-- Skills Section -->
-<div class="h-container h-light-grey h-padding-64">
-  <div class="h-row-padding">
-    <div class="h-col m6">
-      <h3>Improve your skills during this time.</h3>
-      <p>Here are some links provided.</p>
-      <p>You can invest your time and practice your skills<br>
-      Let's get started!</p>
-    </div>
-    <div class="h-col m6">
-      <p class="h-wide"><a href="https://www.geeksforgeeks.org/" target="_blank">Geeks For Geeks</a></p>
-      
-      <p class="h-wide"><a href="https://futureskillsnasscom.edcast.com/" target="_blank">Futureskills by Nasscom</a></p>
-      
-      <p class="h-wide"><a href="https://www.hackerrank.com/" target="_blank">Hacker Rank</a></p>
-      
-    </div>
-  </div>
-</div>
-
-<!-- Events Section -->
-<div class="h-container h-center h-dark-grey" style="padding:100px 16px" id="events">
-  <h3>EVENTS</h3>
-  <p class="h-large">Choose Event </p>
-  <div class="h-row-padding" style="margin-top:64px">
-    <div class="h-third h-section">
-      <ul class="h-ul h-white h-hover-shadow">
-        <li class="h-black h-xlarge h-padding-32">Event Name</li>
-        <li class="h-padding-16"><b>Date</b></li>
-        <li class="h-padding-16">Skills Required</li>
-        <li class="h-padding-16"><b>Rewards</b></li>
+        <label for="Name"><b>Name</b></label>
+        <input id="maintext1" type="text" placeholder="Enter Full Name" name="name" required>
         
+    <label for="email"><b>Email</b></label>
+        <input id="maintext2" type="text" placeholder="Enter University Email" name="email" required>
         
-        <li class="h-light-grey h-padding-24">
-          <button class="h-button h-black h-padding-large">Join</button>
-        </li>
-      </ul>
-    </div>
-    <div class="h-third">
-      <ul class="h-ul h-white h-hover-shadow">
-        <li class="h-red h-xlarge h-padding-48">Event Name</li>
-        <li class="h-padding-16"><b>Date</b></li>
-        <li class="h-padding-16">Skills Required</li>
-        <li class="h-padding-16"><b>Rewards</b></li>
+      <!-- <label for="Event Name"><b>Event Name</b></label>
+        <input id="maintext3" type="text" placeholder="Enter Event Name" name="Event" required> -->
+          <h4>Select Event Type you are associated with:</h4>
+        <select name="Event Name" id="maintext3">
+            <option value="Let's dwell into Android">QUIZ</option>
+            <option value="Code Hub:Coding Contest">Coding Contest</option>
+            <option value="ROBO SOCCER">ROBO SOCCER-ONLINE</option>
+            <option value="PAC-BOT">PAC-BOT-ONLINE</option>
+            <option value="ELECTROMANIA">ELECTROMANIA-LEARNING</option>
+            <option value="The Hunting Ground">GAME</option>
+            <option value="Mind Scribble">competition</option>
+            <option value="Coder Dating">Coder Dating-PROGRAMMING</option>
+            <option value="TECH-WIZARD">TECH-WIZARD</option>
+            <option value="CIRCUITRIXX">Project</option>
+            <option value=" ARDUINO KE KHILADI">HACKATHON</option>
+            <option value="PLAY WITH CIRCUITS">PLAY WITH CIRCUITS-HACKATHON</option>
+            <option value="HURDLE RACE">HURDLE RACE-QUIZ</option>
+            <option value="Crack the nerves"> nerves-QUIZ</option>
+            <option value="Hunt of electrical empire">electrical empire</option>
+            <option value="Jhalak dikhla jaa:The Forte Fight">Challenge</option>
+            <option value="FIFA">Assignment</option>
+            <option value="Counter-Strike: Global Offensive">Code-jam</option>
+          </select>
+        <br>
+        <label for="Phone No"><b>Phone no</b></label>
+        <input id="maintext4" type="text" placeholder="Enter Phone no" name="Phone_no" required>
         
-        
-        <li class="h-light-grey h-padding-24">
-          <button class="h-button h-black h-padding-large">Join</button>
-        </li>
-      </ul>
-    </div>
-    <div class="h-third h-section">
-      <ul class="h-ul h-white h-hover-shadow">
-        <li class="h-black h-xlarge h-padding-32">Event-Name</li>
-        <li class="h-padding-16"><b>Date</b></li>
-        <li class="h-padding-16">Skills Required</li>
-        <li class="h-padding-16"><b>Rewards</b></li>
-        
-        <li class="h-light-grey h-padding-24">
-          <button class="h-button h-black h-padding-large">Join</button>
-        </li>
-      </ul>
-    </div>
-  </div>
-</div>
-
-<!-- Contact Section -->
-<div class="h-container h-light-grey" style="padding:128px 16px" id="contact">
-  <h3 class="h-center">CONTACT</h3>
-  <p class="h-center h-large">Lets get in touch. Send us a message:</p>
-  <div style="margin-top:48px">
-    <p><i class="fa fa-map-marker fa-fw h-xxlarge h-margin-right"></i> India</p>
-    <p><i class="fa fa-phone fa-fw h-xxlarge h-margin-right"></i> Phone:7747XXXXXX</p>
-    <p><i class="fa fa-envelope fa-fw h-xxlarge h-margin-right"> </i> Email: enigma@mail.com</p>
-    <br>
-    <form action="/action_page.php" target="_blank">
-      <p><input class="h-input h-border" type="text" placeholder="Name" required name="Name"></p>
-      <p><input class="h-input h-border" type="text" placeholder="Email" required name="Email"></p>
-      <p><input class="h-input h-border" type="text" placeholder="Subject" required name="Subject"></p>
-      <p><input class="h-input h-border" type="text" placeholder="Message" required name="Message"></p>
-      <p>
-        <button class="h-button h-black" type="submit">
-          <i class="fa fa-paper-plane"></i> SEND MESSAGE
-        </button>
-      </p>
-    </form>
+      
     
-    <img src="image.jpg" class="h-image h-greyscale" style="width:100%;margin-top:20px;margin-bottom:0;">
-  </div>
-</div>
+        <div class="clearfix">
+          <button type="button" class="cancelbtn" onclick="goBack()">Cancel</button>
+          <button id="submitbutton" onclick="subimit()" type="submit" class="signupbtn">Register</button>
+        </div>
+      </div>
 
-<!-- Footer -->
-<footer class="h-center h-black h-padding-64">
-  <a href="#home" class="h-button h-light-grey"><i class="fa fa-arrow-up h-margin-right"></i>To the top</a>
-  
-</footer>
- 
+
+<script src="https://www.gstatic.com/firebasejs/7.14.2/firebase-app.js"></script>
+<script src="https://www.gstatic.com/firebasejs/7.14.2/firebase-firestore.js"></script>
+
+
+<script src="https://www.gstatic.com/firebasejs/7.14.2/firebase-analytics.js"></script>
+
 <script>
-// Modal Image Gallery
-function onClick(element) {
-  document.getElementById("img01").src = element.src;
-  document.getElementById("modal01").style.display = "block";
-  var captionText = document.getElementById("caption");
-  captionText.innerHTML = element.alt;
-}
+ 
+ const firebaseConfig = {
+  apiKey: "AIzaSyDHwVgtJ9x8vqXGL-vyHBPgarjTINxpYVo",
+  authDomain: "enigma-94952.firebaseapp.com",
+  databaseURL: "https://enigma-94952.firebaseio.com",
+  projectId: "enigma-94952",
+  storageBucket: "enigma-94952.appspot.com",
+  messagingSenderId: "841689665845",
+  appId: "1:841689665845:web:4a1931b66875f448f9bc7c",
+  measurementId: "G-RF4SP3Z59G"
+};
 
-// Toggle between showing and hiding the sidebar when clicking the menu icon
-var mySidebar = document.getElementById("mySidebar");
+  firebase.initializeApp(firebaseConfig);
 
-function h_open() {
-  if (mySidebar.style.display === 'block') {
-    mySidebar.style.display = 'none';
-  } else {
-    mySidebar.style.display = 'block';
-  }
-}
-
-// Close the sidebar with the close button
-function h_close() {
-    mySidebar.style.display = "none";
-}
 </script>
+<script src="index.js"></script>
+
+<script>
+        function goBack() {
+          window.history.back()
+        }   
+    </script>
 
 </body>
 </html>
-
-
