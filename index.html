@@ -18,7 +18,7 @@ body, html {
 .bgimg-1 {
   background-position: center;
   background-size: cover;
-  background-image: url("bg.png");
+  background-image: url("titletry.jpeg");
   min-height: 100%;
 }
 
@@ -26,10 +26,17 @@ body, html {
   padding: 16px;
 }
 
-h1,.container p{
-  margin-left:30px;
-}
+
 </style>
+
+
+<link rel="shortcut icon" type="image/jpg" href="{% static 'images/flogo.jpg' %}">
+<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+<title>Organizations</title>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.0/jquery.min.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
 <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
@@ -89,8 +96,8 @@ h1,.container p{
 			<div class="about-details">
 				<div class="about-content">
 					<h2>EDUCATION</h2>
-				<p>This sudden break in your studies is quit depressing we understand but always remember-
-				"The struggle you are in today is developing the strength you need for tomorrow" ~Dr.Abdul Kalam</p>
+				<p>Sudden break in studies is quite depressing, but always remember that a bright and sunny day is always preceded by a dark night-
+          "The struggle you are in today is developing the strength you need for tomorrow" ~Dr.Abdul Kalam</p>
 				</div>
 			</div>
 		</div>
@@ -104,7 +111,7 @@ h1,.container p{
 			<div class="about-details">
 				<div class="about-content">
 					<h2>EXAMS</h2>
-				<p>Many of you were about to appear for extrance exams dont worry everthings is going to be blooming ahead for you just believe in yourself - "If my mind can conceive it,and my heart can believe it then i can achieve it" ~Mohammed ali</p>
+				<p>Many of you were about to appear for extrance exams don't worry everthings is going to be blooming ahead for you just believe in yourself "If my mind can conceive it,and my heart can believe it then I can achieve it" ~Mohammed Ali</p>
 				</div>
 			</div>
 		</div>
@@ -116,7 +123,7 @@ h1,.container p{
 			<div class="about-details">
 				<div class="about-content">
 					<h2>STUCK AWAY FROM HOME</h2>
-				<p>Due to this suddent break of covid-19. You are forced to stay away from home dont panic you just to keep faith in yourself-"May your trails be crooked, winding, lonesome, dangerous, leading to the most amazing view. May your mountains rise into and above the clouds"  ~Edward Abbey</p>
+				<p>Due to this sudden outbreak of covid-19. You are forced to stay away from home but don't panic you just need to keep faith in yourself. "May your trails be crooked, leading to the most amazing view. May your mountains rise into and above the clouds"  ~Edward Abbey</p>
 				</div>
 			</div>
 		</div>
@@ -128,7 +135,7 @@ h1,.container p{
 			<div class="about-details">
 				<div class="about-content">
 					<h2>CAREER RELATED STRESS</h2>
-				<p>Due to these crises and fall of my industries you just need to believe in yourself."Have the courage to follow your heart and intution. They somehow know what you truly want to become." ~Steve Jobs</p>
+				  <p>Due to this pandemic and fall of many industries you just need to believe in yourself."Have the courage to follow your heart and intution. They somehow know what you truly want to become." ~Steve Jobs</p>
 				</div>
 			</div>
 		</div>
@@ -140,16 +147,16 @@ h1,.container p{
 
 
 <!-- Register Section -->
-<div class="container">
-  <h1>Regstration for events</h1>
+<div class="container" id="register" style="padding:60px 0px">
+  <h1>Registration for events</h1>
   <p>Please fill in this form to register in event...</p>
-  <p><a href="index1.html" class="h-button h-black"> </i> Register HERE</a></p>
+  <p><a href="index1.html" class="h-button h-black"> Register HERE</a></p>
   <hr>
 
 </div>
 
 <!-- Promo Section - "Want to organise" -->
-<div class="h-container h-light-grey" style="padding:128px 16px">
+<div class="h-container h-light-grey" style="padding:128px 35px">
   <div class="h-row-padding">
     <div class="h-col m6">
       <h3>Want to organise an event?</h3>
@@ -161,7 +168,7 @@ h1,.container p{
 </div>
 
 <!-- Create Section -->
-<div class="h-container" style="padding:90px 16px" id="create">
+<div class="h-container" style="padding:120px 35px" id="create">
   <h3 class="h-center">CREATE HERE</h3>
   <p class="h-center h-large">Describe your event here</p>
   <div class="h-card">
@@ -185,6 +192,8 @@ h1,.container p{
 
 <script src="https://www.gstatic.com/firebasejs/7.14.2/firebase-app.js"></script>
 <script src="https://www.gstatic.com/firebasejs/7.14.2/firebase-firestore.js"></script>
+
+
 <script src="https://www.gstatic.com/firebasejs/7.14.2/firebase-analytics.js"></script>
 
 <script>
@@ -307,7 +316,7 @@ h1,.container p{
       </p>
     </form>
     
-    <img src="footerImg.png" class="h-image h-greyscale" style="width:100%;margin-top:48px">
+    <img src="image.jpg" class="h-image h-greyscale" style="width:100%;margin-top:48px">
   </div>
 </div>
 
@@ -345,5 +354,6 @@ function h_close() {
 
 </body>
 </html>
+
 
 
