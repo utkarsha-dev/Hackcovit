@@ -30,6 +30,18 @@ h1,.container p{
   margin-left:30px;
 }
 </style>
+
+
+<link rel="shortcut icon" type="image/jpg" href="{% static 'images/flogo.jpg' %}">
+<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+<title>Organizations</title>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.0/jquery.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
 <body>
 
 <!-- Navbar (sit on top) -->
@@ -164,18 +176,51 @@ h1,.container p{
   <div class="h-card">
     <div class="h-container">
       <form action="Thanks.html" target="_blank">
-        <p><input class="h-input h-border" type="text" placeholder="Title of the event" required name="Event-Name"></p>
-        <p><input class="h-input h-border" type="date" placeholder="Date" required name="Event-Date"></p>
-        <p><input class="h-input h-border" type="time" placeholder="Time at which the event is scheduled" required name="Time"></p>
-        <p><textarea class="h-input h-border" type="textbox" placeholder="Skills Required" required name="Skills"></textarea></p>
-        <p><textarea class="h-input h-border" type="textbox" placeholder="Description of Prizes" required name="Rewards"></textarea></p>
+        <p><input class="h-input h-border" id="maintext1" type="text" placeholder="Title of the event" required name="Event-Name"></p>
+        <p><input class="h-input h-border" id="maintext2" type="date" placeholder="Date" required name="Event-Date"></p>
+        <p><input class="h-input h-border" id="maintext3" type="time" placeholder="Time at which the event is scheduled" required name="Time"></p>
+        <p><input class="h-input h-border" id="maintext4" type="text" placeholder="Fees of the event" required name="Fees"></p>
+        <p><textarea class="h-input h-border" id="maintext5" type="textbox" placeholder="Skills Required" required name="Skills"></textarea></p>
+        <p><textarea class="h-input h-border" id="maintext6" type="textbox" placeholder="Description of Prizes" required name="Rewards"></textarea></p>
       
-      
-      <p><button class="h-button h-light-grey h-block"> Create Event </button></p>
+      <div class="clearfix">
+       <p><button  id="submitbutton" onclick="subimit()" type="submit"  class="h-button h-light-grey h-block signupbtn"> Create Event </button></p>
+      </div>
     </form>
     </div>
   </div>
 </div>
+
+
+<script src="https://www.gstatic.com/firebasejs/7.14.2/firebase-app.js"></script>
+<script src="https://www.gstatic.com/firebasejs/7.14.2/firebase-firestore.js"></script>
+
+
+<script src="https://www.gstatic.com/firebasejs/7.14.2/firebase-analytics.js"></script>
+
+<script>
+ 
+ const firebaseConfig = {
+  apiKey: "AIzaSyDHwVgtJ9x8vqXGL-vyHBPgarjTINxpYVo",
+  authDomain: "enigma-94952.firebaseapp.com",
+  databaseURL: "https://enigma-94952.firebaseio.com",
+  projectId: "enigma-94952",
+  storageBucket: "enigma-94952.appspot.com",
+  messagingSenderId: "841689665845",
+  appId: "1:841689665845:web:4a1931b66875f448f9bc7c",
+  measurementId: "G-RF4SP3Z59G"
+};
+
+  firebase.initializeApp(firebaseConfig);
+
+</script>
+<script src="create.js"></script>
+
+<script>
+        function goBack() {
+          window.history.back()
+        }   
+    </script>
 
 <!-- Modal for full size images on click-->
 <div id="modal01" class="h-modal h-black" onclick="this.style.display='none'">
