@@ -12,7 +12,7 @@ function subimit(){
     var db = firebase.firestore();
     var phoneno = /^\d{10}$/;
     var mailformat = /^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/;
-    if(maintext1.value.match("")){
+    if(maintext1.value.match("null")){
         alert("Please enter valid title");
     }
   
@@ -61,4 +61,29 @@ function newElement() {
     document.getElementById("c4").appendChild(li3);
     
    }
+function message(){
+    var db = firebase.firestore();
+    var phoneno = /^\d{10}$/;
+    var mailformat = /^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/;
+    if(m1.value.match("null")){
+        alert("Please enter valid title");
+    }
+  
+    else{
+        db.collection("message").doc().set({
+            Name: (m1.value + ""),
+            Email: (m2.value + ""),
+            Subject: (m3.value + ""),
+            Message: (m4.value + ""),
+         
+        }).then(function (doc){
+            alert ("You have successfully submitted your message");
+            window.history.back();
+            
+        });
+        
+    }
+    
+   
 
+}
