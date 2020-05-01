@@ -30,15 +30,6 @@ h1,.container p{
   margin-left:30px;
 }
 </style>
-
-
-<link rel="shortcut icon" type="image/jpg" href="{% static 'images/flogo.jpg' %}">
-<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
-integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
-<title>Organizations</title>
-<meta charset="utf-8">
-<meta name="viewport" content="width=device-width, initial-scale=1">
-<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.0/jquery.min.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
 <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
@@ -150,8 +141,8 @@ integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw
 
 <!-- Register Section -->
 <div class="container">
-  <h1>Regstration for events</h1>
-  <p>Please fill in this form to register in event...</p>
+  <h1>Regstration for organizations</h1>
+  <p>Please fill in this form to register...</p>
   <p><a href="index1.html" class="h-button h-black"> </i> Register HERE</a></p>
   <hr>
 
@@ -175,7 +166,7 @@ integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw
   <p class="h-center h-large">Describe your event here</p>
   <div class="h-card">
     <div class="h-container">
-      <form action="Thanks.html" target="_blank">
+      <form target="_blank">
         <p><input class="h-input h-border" id="maintext1" type="text" placeholder="Title of the event" required name="Event-Name"></p>
         <p><input class="h-input h-border" id="maintext2" type="date" placeholder="Date" required name="Event-Date"></p>
         <p><input class="h-input h-border" id="maintext3" type="time" placeholder="Time at which the event is scheduled" required name="Time"></p>
@@ -191,11 +182,8 @@ integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw
   </div>
 </div>
 
-
 <script src="https://www.gstatic.com/firebasejs/7.14.2/firebase-app.js"></script>
 <script src="https://www.gstatic.com/firebasejs/7.14.2/firebase-firestore.js"></script>
-
-
 <script src="https://www.gstatic.com/firebasejs/7.14.2/firebase-analytics.js"></script>
 
 <script>
