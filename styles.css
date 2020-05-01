@@ -1,3 +1,4 @@
+
 html{box-sizing:border-box}*,*:before,*:after{box-sizing:inherit}
 
 html{-ms-text-size-adjust:100%;-webkit-text-size-adjust:100%}body{margin:0}
@@ -124,7 +125,7 @@ hr{border:0;border-top:1px solid #eee;margin:20px 0}
 .h-circle{border-radius:50%}
 .h-round-small{border-radius:2px}.h-round,.h-round-medium{border-radius:4px}.h-round-large{border-radius:8px}.h-round-xlarge{border-radius:16px}.h-round-xxlarge{border-radius:32px}
 .h-row-padding,.h-row-padding>.h-half,.h-row-padding>.h-third,.h-row-padding>.h-twothird,.h-row-padding>.h-threequarter,.h-row-padding>.h-quarter,.h-row-padding>.h-col{padding:0 8px}
-.h-container,.h-panel{padding:0.01em 16px}.h-panel{margin-top:16px;margin-bottom:16px}
+.h-container,.h-panel{padding:0.01em 16px;}.h-panel{margin-top:16px;margin-bottom:16px}
 .h-code,.h-codespan{font-family:Consolas,"courier new";font-size:16px}
 .h-code{width:auto;background-color:#fff;padding:8px 12px;border-left:4px solid #4CAF50;word-wrap:break-word}
 .h-codespan{color:crimson;background-color:#f1f1f1;padding-left:4px;padding-right:4px;font-size:110%}
@@ -260,7 +261,8 @@ hr{border:0;border-top:1px solid #eee;margin:20px 0}
 	margin: 70px auto 0;
 	display: flex;
 	flex-direction: row;
-	flex-wrap: wrap;
+    flex-wrap: wrap;
+    background-color: #C6CCCC;
 
 }
 .about-container .about-box
