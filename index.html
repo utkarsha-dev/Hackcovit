@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 <html>
-<title>CSS Template</title>
+<title>Enigma</title>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <link rel="stylesheet" href="./styles.css">
@@ -18,7 +18,7 @@ body, html {
 .bgimg-1 {
   background-position: center;
   background-size: cover;
-  background-image: url("./HackoVIT2020/bg.png");
+  background-image: url("bg.png");
   min-height: 100%;
 }
 
@@ -31,7 +31,8 @@ body, html {
 <!-- Navbar (sit on top) -->
 <div class="h-top">
   <div class="h-bar h-white h-card" id="myNavbar">
-    <a href="#home" class="h-bar-item h-button h-wide">LOGO</a>
+    <a href="#home" class="h-bar-item h-button h-wide">
+      <img src="logo1.png" class="logo">LOGO</a>
     <!-- Right-sided navbar links -->
     <div class="h-right h-hide-small">
       <a href="#about" class="h-bar-item h-button">ABOUT</a>
@@ -61,10 +62,10 @@ body, html {
 <!-- Header with full-height image -->
 <header class="bgimg-1 h-display-container h-grayscale-min" id="home">
   <div class="h-display-left h-text-white" style="padding:48px">
-    <span class="h-jumbo h-hide-small">Start something that matters</span><br>
-    <span class="h-xxlarge h-hide-large h-hide-medium">Start something that matters</span><br>
-    <span class="h-large">Stop wasting valuable time with projects that just isn't you.</span>
-    <p><a href="#about" class="h-button h-white h-padding-large h-large h-margin-top h-opacity h-hover-opacity-off">Learn more and start today</a></p>
+    <span class="h-jumbo h-hide-small">Share.</span><br>
+    <span class="h-xxlarge h-hide-medium">Connect.</span><br>
+    <span class="h-large">Compete.</span>
+    <p><a href="#about" class="h-button h-white h-padding-large h-large h-margin-top h-opacity h-hover-opacity-off">Start today</a></p>
   </div> 
   
 </header>
@@ -97,6 +98,32 @@ body, html {
   </div>
 </div>
 
+
+
+<!-- Register Section -->
+<div class="h-container" style="padding:128px 16px" id="register">
+  <h3 class="h-center">REGISTER HERE</h3>
+  <p class="h-center h-large">Make sure that you register.</p>
+  <div class="h-row-padding h-grayscale" style="margin-top:64px">
+    <div style="margin-top:48px">
+      
+      <br>
+      <form action="/action_page.php" target="_blank">
+        <p><input class="h-input h-border" type="text" placeholder="Name" required name="Name"></p>
+        <p><input class="h-input h-border" type="text" placeholder="Email" required name="Email"></p>
+        <p><input class="h-input h-border" type="number" placeholder="Phone Number" required name="Phone Number"></p>
+        <p><input class="h-input h-border" type="text" placeholder="Type of event interested in" required name="Event Type"></p>
+        <p>
+          <button class="h-button h-black" type="submit">
+            <i class="fa fa-paper-plane"></i> REGISTER
+          </button>
+        </p>
+      </form>
+      
+    </div>
+  </div>
+</div>
+
 <!-- Promo Section - "We know design" -->
 <div class="h-container h-light-grey" style="padding:128px 16px">
   <div class="h-row-padding">
@@ -108,78 +135,6 @@ body, html {
     <div class="h-col m6">
       <img class="h-image h-round-large" src="/himages/phone_buildings.jpg" alt="Buildings" width="700" height="394">
     </div>
-  </div>
-</div>
-
-<!-- Register Section -->
-<div class="h-container" style="padding:128px 16px" id="register">
-  <h3 class="h-center">REGISTER HERE</h3>
-  <p class="h-center h-large">The ones who runs this company</p>
-  <div class="h-row-padding h-grayscale" style="margin-top:64px">
-    <div class="h-col l3 m6 h-margin-bottom">
-      <div class="h-card">
-        <img src="/himages/team2.jpg" alt="John" style="width:100%">
-        <div class="h-container">
-          <h3>John Doe</h3>
-          <p class="h-opacity">CEO & Founder</p>
-          <p>Phasellus eget enim eu lectus faucibus vestibulum. Suspendisse sodales pellentesque elementum.</p>
-          <p><button class="h-button h-light-grey h-block"><i class="fa fa-envelope"></i> Contact</button></p>
-        </div>
-      </div>
-    </div>
-    <div class="h-col l3 m6 h-margin-bottom">
-      <div class="h-card">
-        <img src="/himages/team1.jpg" alt="Jane" style="width:100%">
-        <div class="h-container">
-          <h3>Anja Doe</h3>
-          <p class="h-opacity">Art Director</p>
-          <p>Phasellus eget enim eu lectus faucibus vestibulum. Suspendisse sodales pellentesque elementum.</p>
-          <p><button class="h-button h-light-grey h-block"><i class="fa fa-envelope"></i> Contact</button></p>
-        </div>
-      </div>
-    </div>
-    <div class="h-col l3 m6 h-margin-bottom">
-      <div class="h-card">
-        <img src="/himages/team3.jpg" alt="Mike" style="width:100%">
-        <div class="h-container">
-          <h3>Mike Ross</h3>
-          <p class="h-opacity">Web Designer</p>
-          <p>Phasellus eget enim eu lectus faucibus vestibulum. Suspendisse sodales pellentesque elementum.</p>
-          <p><button class="h-button h-light-grey h-block"><i class="fa fa-envelope"></i> Contact</button></p>
-        </div>
-      </div>
-    </div>
-    <div class="h-col l3 m6 h-margin-bottom">
-      <div class="h-card">
-        <img src="/himages/team4.jpg" alt="Dan" style="width:100%">
-        <div class="h-container">
-          <h3>Dan Star</h3>
-          <p class="h-opacity">Designer</p>
-          <p>Phasellus eget enim eu lectus faucibus vestibulum. Suspendisse sodales pellentesque elementum.</p>
-          <p><button class="h-button h-light-grey h-block"><i class="fa fa-envelope"></i> Contact</button></p>
-        </div>
-      </div>
-    </div>
-  </div>
-</div>
-
-<!-- Promo Section "Statistics" -->
-<div class="h-container h-row h-center h-dark-grey h-padding-64">
-  <div class="h-quarter">
-    <span class="h-xxlarge">14+</span>
-    <br>Partners
-  </div>
-  <div class="h-quarter">
-    <span class="h-xxlarge">55+</span>
-    <br>Projects Done
-  </div>
-  <div class="h-quarter">
-    <span class="h-xxlarge">89+</span>
-    <br>Happy Clients
-  </div>
-  <div class="h-quarter">
-    <span class="h-xxlarge">150+</span>
-    <br>Meetings
   </div>
 </div>
 
@@ -339,15 +294,7 @@ body, html {
 <!-- Footer -->
 <footer class="h-center h-black h-padding-64">
   <a href="#home" class="h-button h-light-grey"><i class="fa fa-arrow-up h-margin-right"></i>To the top</a>
-  <div class="h-xlarge h-section">
-    <i class="fa fa-facebook-official h-hover-opacity"></i>
-    <i class="fa fa-instagram h-hover-opacity"></i>
-    <i class="fa fa-snapchat h-hover-opacity"></i>
-    <i class="fa fa-pinterest-p h-hover-opacity"></i>
-    <i class="fa fa-twitter h-hover-opacity"></i>
-    <i class="fa fa-linkedin h-hover-opacity"></i>
-  </div>
-  <p>Powered by <a href="https://www.hschools.com/hcss/default.asp" title="H.CSS" target="_blank" class="h-hover-text-green">h.css</a></p>
+  
 </footer>
  
 <script>
