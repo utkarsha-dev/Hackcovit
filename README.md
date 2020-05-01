@@ -6,3 +6,13 @@ Our website acts as a platform for users mainly students to learn, explore and s
 
 Here are some screen shots of the website.
 
+<br>
+
+![helping](../master/ss1.jpg)
+![helping](../master/ss2.jpg)
+![helping](../master/ss3.jpg)
+
+
+We have used firebase as the database for whole system. The database will look like this.
+
+![helping](../master/ss4.jpg)
