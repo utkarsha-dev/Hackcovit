@@ -3,7 +3,7 @@
 <title>Enigma</title>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<link rel="stylesheet" href="./styles.css">
+<link rel="stylesheet" href="./css/styles.css">
 <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Raleway">
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 <style>
@@ -18,7 +18,7 @@ body, html {
 .bgimg-1 {
   background-position: center;
   background-size: cover;
-  background-image: url("titletry.jpeg");
+  background-image: url("./assets/titletry.jpeg");
   min-height: 100%;
 }
 
@@ -29,6 +29,13 @@ body, html {
 
 </style>
 
+
+<link rel="shortcut icon" type="image/jpg" href="{% static 'images/flogo.jpg' %}">
+<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+<title>Organizations</title>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
 <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.0/jquery.min.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
@@ -39,7 +46,7 @@ body, html {
 <div class="h-top">
   <div class="h-bar h-white h-card" id="myNavbar">
     <a href="#home" class="h-bar-item h-button h-wide">
-      <img src="logo2.png" class="logo">LOGO</a>
+      <img src="./assets/logo2.png" class="logo">LOGO</a>
     <!-- Right-sided navbar links -->
     <div class="h-right h-hide-small">
       <a href="#about" class="h-bar-item h-button">ABOUT</a>
@@ -84,7 +91,7 @@ body, html {
   <div class="about-container">
 		<div class="about-box">
 			<div class="about-imgBox">
-				<img src="img1.jpeg">
+				<img src="./assets/img1.jpeg">
 			</div>
 			<div class="about-details">
 				<div class="about-content">
@@ -99,7 +106,7 @@ body, html {
 		<div class="about-box">
 			
 			<div class="about-imgBox">
-				<img src="img3.jpeg">
+				<img src="./assets/img3.jpeg">
 			</div>
 			<div class="about-details">
 				<div class="about-content">
@@ -111,7 +118,7 @@ body, html {
 		<div class="about-box">
 			
 			<div class="about-imgBox">
-				<img src="img4.jpeg">
+				<img src="./assets/img4.jpeg">
 			</div>
 			<div class="about-details">
 				<div class="about-content">
@@ -123,7 +130,7 @@ body, html {
 		<div class="about-box">
 			
 			<div class="about-imgBox">
-				<img src="img5.jpeg">
+				<img src="./assets/img5.jpeg">
 			</div>
 			<div class="about-details">
 				<div class="about-content">
@@ -140,10 +147,10 @@ body, html {
 
 
 <!-- Register Section -->
-<div class="container" id="register" style="padding:85px 0px">
-  <h1>Registration</h1>
-  <p>Please fill in this form to register...</p>
-  <p><a href="index1.html" class="h-button h-black"> Register HERE</a></p>
+<div class="container" id="register" style="padding:60px 0px">
+  <h1>Registration for events</h1>
+  <p>Please fill in this form to register in event...</p>
+  <p><a href="./html/register.html" class="h-button h-black"> Register HERE</a></p>
   <hr>
 
 </div>
@@ -166,7 +173,7 @@ body, html {
   <p class="h-center h-large">Describe your event here</p>
   <div class="h-card">
     <div class="h-container">
-      <form>
+      <form action="Thanks.html" target="_blank">
         <p><input class="h-input h-border" id="maintext1" type="text" placeholder="Title of the event" required name="Event-Name"></p>
         <p><input class="h-input h-border" id="maintext2" type="date" placeholder="Date" required name="Event-Date"></p>
         <p><input class="h-input h-border" id="maintext3" type="time" placeholder="Time at which the event is scheduled" required name="Time"></p>
@@ -175,7 +182,7 @@ body, html {
         <p><textarea class="h-input h-border" id="maintext6" type="textbox" placeholder="Description of Prizes" required name="Rewards"></textarea></p>
       
       <div class="clearfix">
-       <p><button  id="submitbutton" onclick="subimit()" type="submit"  class="h-button h-light-grey h-block"> Create Event </button></p>
+       <p><button  id="submitbutton" onclick="subimit()" type="submit"  class="h-button h-light-grey h-block signupbtn"> Create Event </button></p>
       </div>
     </form>
     </div>
@@ -185,6 +192,8 @@ body, html {
 
 <script src="https://www.gstatic.com/firebasejs/7.14.2/firebase-app.js"></script>
 <script src="https://www.gstatic.com/firebasejs/7.14.2/firebase-firestore.js"></script>
+
+
 <script src="https://www.gstatic.com/firebasejs/7.14.2/firebase-analytics.js"></script>
 
 <script>
@@ -203,7 +212,8 @@ body, html {
   firebase.initializeApp(firebaseConfig);
 
 </script>
-<script src="create.js"></script>
+<script src="./js/index.js"></script>
+<script src="./js/create.js"></script>
 
 <script>
         function goBack() {
@@ -243,45 +253,43 @@ body, html {
 <!-- Events Section -->
 <div class="h-container h-center h-dark-grey" style="padding:100px 16px" id="events">
   <h3>EVENTS</h3>
-  <p class="h-large">Events for you </p>
+  <p class="h-large">Choose Event </p>
   <div class="h-row-padding" style="margin-top:64px">
     <div class="h-third h-section">
       <ul class="h-ul h-white h-hover-shadow">
-        <li class="h-black h-xlarge h-padding-32">HackTheCrisis</li>
-        <li class="h-padding-16"><b>Date - 22-05-2020</b></li>
-        <li class="h-padding-16">Skills Required - Web-D</li>
-        <li class="h-padding-16"><b>Rewards - upto 2,00,000 cash Prizes</b></li>
+        <li class="h-black h-xlarge h-padding-32">Event Name</li>
+        <li class="h-padding-16"><b>Date</b></li>
+        <li class="h-padding-16">Skills Required</li>
+        <li class="h-padding-16"><b>Rewards</b></li>
         
         
         <li class="h-light-grey h-padding-24">
-          <button class="h-button h-black h-padding-large">Get more details</button>
+          <button class="h-button h-black h-padding-large">Join</button>
         </li>
       </ul>
     </div>
     <div class="h-third">
       <ul class="h-ul h-white h-hover-shadow">
-        <li class="h-red h-xlarge h-padding-48" id="c1"></li>
-        <li class="h-padding-16" id="c2"><b>Date: </b></li>
-        <li class="h-padding-16" id="c3">Skills Required: </li>
-        <li class="h-padding-16" id="c4"><b>Rewards: </b></li>
+        <li class="h-red h-xlarge h-padding-48">Event Name</li>
+        <li class="h-padding-16"><b>Date</b></li>
+        <li class="h-padding-16">Skills Required</li>
+        <li class="h-padding-16"><b>Rewards</b></li>
         
         
         <li class="h-light-grey h-padding-24">
-          <button class="h-button h-black h-padding-large" onclick="newElement()" >Get more details</button>
+          <button class="h-button h-black h-padding-large">Join</button>
         </li>
       </ul>
     </div>
-    
     <div class="h-third h-section">
       <ul class="h-ul h-white h-hover-shadow">
-        <li class="h-black h-xlarge h-padding-32">Projo (Project)</li>
-        <li class="h-padding-16"><b>Date - 30-05-2020</b></li>
-        <li class="h-padding-16" >Skills Required - Deep-Learning</li>
-        <li class="h-padding-16"><b>Rewards - iphone 11 pro</b></li>
-        
+        <li class="h-black h-xlarge h-padding-32">Event-Name</li>
+        <li class="h-padding-16"><b>Date</b></li>
+        <li class="h-padding-16">Skills Required</li>
+        <li class="h-padding-16"><b>Rewards</b></li>
         
         <li class="h-light-grey h-padding-24">
-          <button class="h-button h-black h-padding-large">Get more details</button>
+          <button class="h-button h-black h-padding-large">Join</button>
         </li>
       </ul>
     </div>
@@ -298,18 +306,18 @@ body, html {
     <p><i class="fa fa-envelope fa-fw h-xxlarge h-margin-right"> </i> Email: enigma@mail.com</p>
     <br>
     <form action="/action_page.php" target="_blank">
-      <p><input class="h-input h-border" id="m1" type="text" placeholder="Name" required name="Name"></p>
-      <p><input class="h-input h-border" id="m2" type="text" placeholder="Email" required name="Email"></p>
-      <p><input class="h-input h-border" id="m3" type="text" placeholder="Subject" required name="Subject"></p>
-      <p><input class="h-input h-border" id="m4" type="text" placeholder="Message" required name="Message"></p>
+      <p><input class="h-input h-border" type="text" placeholder="Name" required name="Name"></p>
+      <p><input class="h-input h-border" type="text" placeholder="Email" required name="Email"></p>
+      <p><input class="h-input h-border" type="text" placeholder="Subject" required name="Subject"></p>
+      <p><input class="h-input h-border" type="text" placeholder="Message" required name="Message"></p>
       <p>
-        <button class="h-button h-black" type="submit" onclick="message()">
+        <button class="h-button h-black" type="submit">
           <i class="fa fa-paper-plane"></i> SEND MESSAGE
         </button>
       </p>
     </form>
     
-    <img src="image.jpg" class="h-image h-greyscale" style="width:100%;margin-top:48px">
+    <img src="./assets/image.jpg" class="h-image h-greyscale" style="width:100%;margin-top:48px">
   </div>
 </div>
 
@@ -347,6 +355,5 @@ function h_close() {
 
 </body>
 </html>
-
 
 

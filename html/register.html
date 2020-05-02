@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<style>
+        body {font-family: Arial, Helvetica, sans-serif;
+        background: #000000;}
+        * {box-sizing: border-box;}
+        
+        /* Full-width input fields */
+        input[type=text]{
+          width: 100%;
+          padding: 15px;
+          margin: 5px 0 22px 0;
+          display: inline-block;
+          border: none;
+          background: #f1f1f1;
+        }
+        
+        input[type=text]:focus{
+          background-color: #ddd;
+          outline: none;
+        }
+        
+        hr {
+          border: 1px solid #f1f1f1;
+          margin-bottom: 25px;
+        }
+        
+        /* Set a style for all buttons */
+        button {
+          background-color: #4CAF50;
+          color: white;
+          padding: 2px 2px 14px 20px;
+          margin: 8px 0;
+          border: none;
+          cursor: pointer;
+          width: 100%;
+          opacity: 0.9;
+          border-radius: 10px;
+        }
+        
+        button:hover {
+          opacity:1;
+        }
+        
+        /* Extra styles for the cancel button */
+        .cancelbtn {
+          padding: 14px 20px;
+          background-color: #f44336;
+        }
+        .signupbtn{
+          padding: 14px 20px;
+          background-color: green;
+        }
+        /* Float cancel and signup buttons and add an equal width */
+        .cancelbtn, .signupbtn {
+          float: left;
+          width: 50%;
+        }
+        
+        /* Add padding to container elements */
+        .container {
+          padding: 5px 5px 5px 5px;
+        }
+        
+        /* Clear floats */
+        .clearfix::after {
+          content: "";
+          clear: both;
+          display: table;
+        }       
+        /* Change styles for cancel button and signup button on extra small screens */
+        @media screen and (max-width: 500px) {
+          .body,.button,.cancelbtn, .signupbtn {
+              width: 100%;
+           }
+         }
+</style>        
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.0/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+    </head>
+<body>
+        
+  <div class="container">
+        <h1>Registration</h1>
+        <p>Please fill in this form to register...</p>
+        <hr>
+    
+        <label for="Name"><b>Name</b></label>
+        <input id="maintext1" type="text" placeholder="Enter Full Name" name="name" required>
+        
+    <label for="email"><b>Email</b></label>
+        <input id="maintext2" type="text" placeholder="Enter University Email" name="email" required>
+        
+      <!-- <label for="Event Name"><b>Event Name</b></label>
+        <input id="maintext3" type="text" placeholder="Enter Event Name" name="Event" required> -->
+          <h4>Select Event Type you are associated with:</h4>
+        <select name="Event Name" id="maintext3">
+            <option value="Let's dwell into Android">QUIZ</option>
+            <option value="Code Hub:Coding Contest">Coding Contest</option>
+            <option value="ROBO SOCCER">ROBO SOCCER-ONLINE</option>
+            <option value="PAC-BOT">PAC-BOT-ONLINE</option>
+            <option value="ELECTROMANIA">ELECTROMANIA-LEARNING</option>
+            <option value="The Hunting Ground">GAME</option>
+            <option value="Mind Scribble">competition</option>
+            <option value="Coder Dating">Coder Dating-PROGRAMMING</option>
+            <option value="TECH-WIZARD">TECH-WIZARD</option>
+            <option value="CIRCUITRIXX">Project</option>
+            <option value=" ARDUINO KE KHILADI">HACKATHON</option>
+            <option value="PLAY WITH CIRCUITS">PLAY WITH CIRCUITS-HACKATHON</option>
+            <option value="HURDLE RACE">HURDLE RACE-QUIZ</option>
+            <option value="Crack the nerves"> nerves-QUIZ</option>
+            <option value="Hunt of electrical empire">electrical empire</option>
+            <option value="Jhalak dikhla jaa:The Forte Fight">Challenge</option>
+            <option value="FIFA">Assignment</option>
+            <option value="Counter-Strike: Global Offensive">Code-jam</option>
+          </select>
+        <br>
+        <label for="Phone No"><b>Phone no</b></label>
+        <input id="maintext4" type="text" placeholder="Enter Phone no" name="Phone_no" required>
+        
+      
+    
+        <div class="clearfix">
+          <button type="button" class="cancelbtn" onclick="goBack()">Cancel</button>
+          <button id="submitbutton" onclick="subimit()" type="submit" class="signupbtn">Register</button>
+        </div>
+      </div>
+
+
+<script src="https://www.gstatic.com/firebasejs/7.14.2/firebase-app.js"></script>
+<script src="https://www.gstatic.com/firebasejs/7.14.2/firebase-firestore.js"></script>
+
+
+<script src="https://www.gstatic.com/firebasejs/7.14.2/firebase-analytics.js"></script>
+
+<script>
+ 
+ const firebaseConfig = {
+  apiKey: "AIzaSyDHwVgtJ9x8vqXGL-vyHBPgarjTINxpYVo",
+  authDomain: "enigma-94952.firebaseapp.com",
+  databaseURL: "https://enigma-94952.firebaseio.com",
+  projectId: "enigma-94952",
+  storageBucket: "enigma-94952.appspot.com",
+  messagingSenderId: "841689665845",
+  appId: "1:841689665845:web:4a1931b66875f448f9bc7c",
+  measurementId: "G-RF4SP3Z59G"
+};
+
+  firebase.initializeApp(firebaseConfig);
+
+</script>
+<script src="index.js"></script>
+
+<script>
+        function goBack() {
+          window.history.back()
+        }   
+    </script>
+
+</body>
+</html>

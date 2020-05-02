@@ -326,9 +326,3 @@ hr{border:0;border-top:1px solid #eee;margin:20px 0}
 	margin: 10px 0 0;
 	padding: 0;
 }
-/* Clear floats */
-.clearfix::after {
-        content: "";
-        clear: both;
-        display: table;
- }
