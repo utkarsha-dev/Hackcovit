@@ -26,7 +26,8 @@ function subimit(){
             Prize: (maintext6.value + ""),
 
         }).then(function (doc){
-            alert ("You have successfully submitted your event");            
+            alert ("You have successfully submitted your event");   
+            
         });
        
         
